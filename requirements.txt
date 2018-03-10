@@ -1,0 +1,4 @@
+Cython==0.25
+kivy==1.10.0
+pygame==1.9.3
+python-for-android==0.6.0
