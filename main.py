@@ -17,6 +17,9 @@ class StartScreen(Screen):
 class AboutScreen(Screen):
     pass
 
+class SettingsScreen(Screen):
+    pass
+
 
 class Navigator(NavigationDrawer):
     image_source = StringProperty('data/images/me.jpg')
@@ -30,8 +33,13 @@ class NavigateApp(App):
     def build(self):
         self.load_all_kv_files(KV_DIR)
         self.screen = ScreenManager()
-        self.screen.add_widget(StartScreen(name='start'))
-        self.screen.add_widget(AboutScreen(name='about'))
+        self.screen_start = StartScreen(name='start')
+        self.screen_about = AboutScreen(name='about')
+        self.screen_setting = SettingsScreen(name='settings')
+        self.screen.add_widget( self.screen_start)
+        self.screen.add_widget(self.screen_about)
+        self.screen.add_widget(self.screen_setting)
+        self.screen.current = "start"
         # main_widget = Builder.load_file(os.path.join(KV_DIR, "main.kv"))
         self.nav_drawer = Navigator()
         return self.screen
@@ -44,8 +52,7 @@ class NavigateApp(App):
                     Builder.load_string(kv.read())
 
     def show_about(self, *args):
-        # self.nav_drawer.toggle_nav_drawer()
-        # self.screen.ids.about.ids.label.text = ""
-        pass
+        self.screen.current = "about"
+        return True
 
 NavigateApp().run()
