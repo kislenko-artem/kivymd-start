@@ -59,9 +59,9 @@ from kivy.properties import NumericProperty, BoundedNumericProperty, \
     ReferenceListProperty, AliasProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
-from vendor.kivymd.vendor.circleLayout import CircularLayout
+from kivymd.vendor.circleLayout import CircularLayout
 
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
 if sys.version_info[0] > 2:
     def xrange(first=None, second=None, third=None):

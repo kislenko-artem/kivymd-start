@@ -4,14 +4,14 @@ from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import ListProperty, StringProperty, OptionProperty
 from kivy.uix.boxlayout import BoxLayout
-from vendor.kivymd.backgroundcolorbehavior import BackgroundColorBehavior
-from vendor.kivymd.elevationbehavior import ElevationBehavior
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.backgroundcolorbehavior import BackgroundColorBehavior
+from kivymd.elevationbehavior import ElevationBehavior
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.button import MDIconButton
+from kivymd.button import MDIconButton
 
 Builder.load_string('''
-#:import m_res  vendor.kivymd.material_resources
+#:import m_res  kivymd.material_resources
 <Toolbar>
     size_hint_y: None
     height: root.theme_cls.standard_increment

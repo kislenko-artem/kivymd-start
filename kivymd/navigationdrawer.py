@@ -2,13 +2,13 @@
 from kivy.animation import Animation
 from kivy.lang import Builder
 from kivy.properties import StringProperty, ObjectProperty
-from vendor.kivymd.elevationbehavior import ElevationBehavior
-from vendor.kivymd.label import MDLabel
-from vendor.kivymd.list import OneLineIconListItem, ILeftBody, BaseListItem
-from vendor.kivymd.slidingpanel import SlidingPanel
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.elevationbehavior import ElevationBehavior
+from kivymd.label import MDLabel
+from kivymd.list import OneLineIconListItem, ILeftBody, BaseListItem
+from kivymd.slidingpanel import SlidingPanel
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.icon_definitions import md_icons
+from kivymd.icon_definitions import md_icons
 
 Builder.load_string('''
 <NavDrawerToolbar@Toolbar>

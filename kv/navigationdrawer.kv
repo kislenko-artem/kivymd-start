@@ -14,19 +14,6 @@
         Rectangle:
             size: root.size
             pos: root.pos
-    BoxLayout:
-        size_hint: (1, .4)
-        NavDrawerToolbar:
-            padding: 10, 10
-            canvas.after:
-                Color:
-                    rgba: (1, 1, 1, 1)
-                RoundedRectangle:
-                    size: (self.size[1]-dp(14), self.size[1]-dp(14))
-                    pos: (self.pos[0]+(self.size[0]-self.size[1])/2, self.pos[1]+dp(7))
-                    source: root.image_source
-                    radius: [self.size[1]-(self.size[1]/2)]
-
     ScrollView:
         do_scroll_x: False
         MDList:

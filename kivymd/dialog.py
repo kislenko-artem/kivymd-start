@@ -5,10 +5,10 @@ from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import StringProperty, ObjectProperty, ListProperty
 from kivy.uix.modalview import ModalView
-from vendor.kivymd.elevationbehavior import ElevationBehavior
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.elevationbehavior import ElevationBehavior
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.button import MDFlatButton
+from kivymd.button import MDFlatButton
 
 Builder.load_string('''
 <MDDialog>:

@@ -2,24 +2,17 @@
 import os
 
 from kivy.animation import Animation
-from kivy.lang import Builder
 from kivy.properties import StringProperty, ObjectProperty
-from vendor.kivymd.elevationbehavior import ElevationBehavior
-from vendor.kivymd.label import MDLabel
-from vendor.kivymd.list import OneLineIconListItem, ILeftBody, BaseListItem
-from vendor.kivymd.slidingpanel import SlidingPanel
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.elevationbehavior import ElevationBehavior
+from kivymd.label import MDLabel
+from kivymd.list import OneLineIconListItem, ILeftBody, BaseListItem
+from kivymd.slidingpanel import SlidingPanel
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.icon_definitions import md_icons
-
-from config import KV_DIR
-
-
-Builder.load_file(os.path.join(KV_DIR, "navigationdrawer.kv"))
+from kivymd.icon_definitions import md_icons
 
 
 class NavigationDrawer(SlidingPanel, ThemableBehavior, ElevationBehavior):
-    image_source = StringProperty()
     widget_list = ObjectProperty()
 
     def add_widget(self, widget, index=0):

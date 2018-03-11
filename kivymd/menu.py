@@ -9,12 +9,12 @@ from kivy.properties import NumericProperty, ListProperty, OptionProperty, \
     StringProperty
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.boxlayout import BoxLayout
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
-import vendor.kivymd.material_resources as m_res
+import kivymd.material_resources as m_res
 
 Builder.load_string('''
-#:import STD_INC  vendor.kivymd.material_resources.STANDARD_INCREMENT
+#:import STD_INC  kivymd.material_resources.STANDARD_INCREMENT
 <MDMenuItem>
     size_hint_y: None
     height: dp(48)

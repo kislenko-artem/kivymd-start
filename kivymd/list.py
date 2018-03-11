@@ -140,7 +140,7 @@ API
 ---
 '''
 
-import vendor.kivymd.material_resources as m_res
+import kivymd.material_resources as m_res
 from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty, \
@@ -148,12 +148,12 @@ from kivy.properties import ObjectProperty, StringProperty, NumericProperty, \
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.gridlayout import GridLayout
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.ripplebehavior import RectangularRippleBehavior
+from kivymd.ripplebehavior import RectangularRippleBehavior
 
 Builder.load_string('''
-#:import m_res  vendor.kivymd.material_resources
+#:import m_res  kivymd.material_resources
 <MDList>
     cols: 1
     size_hint_y: None

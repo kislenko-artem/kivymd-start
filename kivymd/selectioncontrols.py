@@ -11,12 +11,12 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 from kivy.utils import get_color_from_hex
-from vendor.kivymd.color_definitions import colors
-from vendor.kivymd.elevationbehavior import RoundElevationBehavior
-from vendor.kivymd.icon_definitions import md_icons
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.color_definitions import colors
+from kivymd.elevationbehavior import RoundElevationBehavior
+from kivymd.icon_definitions import md_icons
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.ripplebehavior import CircularRippleBehavior
+from kivymd.ripplebehavior import CircularRippleBehavior
 
 Builder.load_string('''
 <MDCheckbox>:

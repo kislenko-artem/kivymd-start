@@ -5,14 +5,14 @@ from kivy.properties import ObjectProperty
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.modalview import ModalView
 from kivy.utils import get_color_from_hex
-from vendor.kivymd.color_definitions import colors
-from vendor.kivymd.elevationbehavior import ElevationBehavior
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.color_definitions import colors
+from kivymd.elevationbehavior import ElevationBehavior
+from kivymd.theming import ThemableBehavior
 
 Builder.load_string("""
-#:import SingleLineTextField  vendor.kivymd.textfields.SingleLineTextField
-#:import MDTabbedPanel  vendor.kivymd.tabs.MDTabbedPanel
-#:import MDTab  vendor.kivymd.tabs.MDTab
+#:import SingleLineTextField  kivymd.textfields.SingleLineTextField
+#:import MDTabbedPanel  kivymd.tabs.MDTabbedPanel
+#:import MDTab  kivymd.tabs.MDTab
 <MDThemePicker>:
     size_hint: (None, None)
     size: dp(260), dp(120)+dp(290)
@@ -394,15 +394,15 @@ class MDThemePicker(ThemableBehavior, FloatLayout, ModalView, ElevationBehavior)
 
 if __name__ == "__main__":
     from kivy.app import App
-    from vendor.kivymd.theming import ThemeManager
+    from kivymd.theming import ThemeManager
 
     class ThemePickerApp(App):
         theme_cls = ThemeManager()
 
         def build(self):
             main_widget = Builder.load_string("""
-#:import MDRaisedButton  vendor.kivymd.button.MDRaisedButton
-#:import MDThemePicker  vendor.kivymd.theme_picker.MDThemePicker
+#:import MDRaisedButton  kivymd.button.MDRaisedButton
+#:import MDThemePicker  kivymd.theme_picker.MDThemePicker
 FloatLayout:
     MDRaisedButton:
         size_hint: None, None

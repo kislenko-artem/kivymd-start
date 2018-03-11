@@ -4,9 +4,9 @@ from kivy.lang import Builder
 from kivy.properties import StringProperty, ListProperty, OptionProperty
 from kivy.uix.accordion import Accordion, AccordionItem
 from kivy.uix.boxlayout import BoxLayout
-from vendor.kivymd.backgroundcolorbehavior import BackgroundColorBehavior
+from kivymd.backgroundcolorbehavior import BackgroundColorBehavior
 
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
 
 class MDAccordionItemTitleLayout(ThemableBehavior, BackgroundColorBehavior, BoxLayout):
@@ -60,8 +60,8 @@ class MDAccordionItem(ThemableBehavior, AccordionItem):
  
  
 Builder.load_string('''
-#:import MDLabel  vendor.kivymd.label.MDLabel
-#:import md_icons  vendor.kivymd.icon_definitions.md_icons
+#:import MDLabel  kivymd.label.MDLabel
+#:import md_icons  kivymd.icon_definitions.md_icons
 
 
 <MDAccordionItem>:
@@ -164,7 +164,7 @@ Builder.load_string('''
     
 if __name__ == '__main__':
     from kivy.app import App
-    from vendor.kivymd.theming import ThemeManager
+    from kivymd.theming import ThemeManager
     
     class AccordionApp(App):
         theme_cls = ThemeManager()
@@ -172,9 +172,9 @@ if __name__ == '__main__':
         def build(self):
             # self.theme_cls.primary_palette = 'Indigo'
             return Builder.load_string("""
-#:import MDLabel  vendor.kivymd.label.MDLabel
-#:import MDList  vendor.kivymd.list.MDList
-#:import OneLineListItem  vendor.kivymd.list.OneLineListItem
+#:import MDLabel  kivymd.label.MDLabel
+#:import MDList  kivymd.list.MDList
+#:import OneLineListItem  kivymd.list.OneLineListItem
 BoxLayout:
     spacing: '64dp'
     MDAccordion:

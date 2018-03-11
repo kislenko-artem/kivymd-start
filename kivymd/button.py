@@ -20,19 +20,19 @@ from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.boxlayout import BoxLayout
 from kivy.utils import get_color_from_hex
-from vendor.kivymd.backgroundcolorbehavior import BackgroundColorBehavior
-from vendor.kivymd.color_definitions import colors
-from vendor.kivymd.elevationbehavior import ElevationBehavior, \
+from kivymd.backgroundcolorbehavior import BackgroundColorBehavior
+from kivymd.color_definitions import colors
+from kivymd.elevationbehavior import ElevationBehavior, \
     RoundElevationBehavior
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.ripplebehavior import CircularRippleBehavior, \
+from kivymd.ripplebehavior import CircularRippleBehavior, \
     RectangularRippleBehavior
 
 Builder.load_string('''
-#:import md_icons  vendor.kivymd.icon_definitions.md_icons
-#:import colors  vendor.kivymd.color_definitions.colors
-#:import MDLabel  vendor.kivymd.label.MDLabel
+#:import md_icons  kivymd.icon_definitions.md_icons
+#:import colors  kivymd.color_definitions.colors
+#:import MDLabel  kivymd.label.MDLabel
 <MDIconButton>
     size_hint: (None, None)
     size: (dp(48), dp(48))

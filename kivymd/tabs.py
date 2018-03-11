@@ -11,10 +11,10 @@ from kivy.properties import StringProperty, DictProperty, ListProperty, \
     ObjectProperty, OptionProperty, BoundedNumericProperty
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
-from vendor.kivymd.backgroundcolorbehavior import BackgroundColorBehavior
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.backgroundcolorbehavior import BackgroundColorBehavior
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.button import MDFlatButton
+from kivymd.button import MDFlatButton
 
 Builder.load_string("""
 <MDTabbedPanel>:
@@ -253,7 +253,7 @@ class MDTabbedPanel(ThemableBehavior, BackgroundColorBehavior, BoxLayout):
         
 if __name__ == '__main__':
     from kivy.app import App
-    from vendor.kivymd.theming import ThemeManager
+    from kivymd.theming import ThemeManager
     
     class TabsApp(App):
         theme_cls = ThemeManager()
@@ -264,7 +264,7 @@ if __name__ == '__main__':
             # self.theme_cls.theme_style = 'Dark'
 
             return Builder.load_string("""
-#:import Toolbar  vendor.kivymd.toolbar.Toolbar
+#:import Toolbar  kivymd.toolbar.Toolbar
 BoxLayout:
     orientation:'vertical'
     Toolbar:

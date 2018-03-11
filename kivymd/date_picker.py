@@ -12,11 +12,11 @@ from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.behaviors import ButtonBehavior
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.modalview import ModalView
-from vendor.kivymd.elevationbehavior import ElevationBehavior
-from vendor.kivymd.label import MDLabel
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.elevationbehavior import ElevationBehavior
+from kivymd.label import MDLabel
+from kivymd.theming import ThemableBehavior
 
-from vendor.kivymd.ripplebehavior import CircularRippleBehavior
+from kivymd.ripplebehavior import CircularRippleBehavior
 
 Builder.load_string("""
 #:import calendar calendar

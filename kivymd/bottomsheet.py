@@ -49,12 +49,12 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.modalview import ModalView
 from kivy.uix.scrollview import ScrollView
-from vendor.kivymd.backgroundcolorbehavior import BackgroundColorBehavior
-from vendor.kivymd.label import MDLabel
-from vendor.kivymd.list import MDList, OneLineListItem, ILeftBody, \
+from kivymd.backgroundcolorbehavior import BackgroundColorBehavior
+from kivymd.label import MDLabel
+from kivymd.list import MDList, OneLineListItem, ILeftBody, \
     OneLineIconListItem
 
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
 Builder.load_string('''
 <MDBottomSheet>
@@ -130,7 +130,7 @@ class MDBottomSheet(ThemableBehavior, ModalView):
 
 
 Builder.load_string('''
-#:import md_icons  vendor.kivymd.icon_definitions.md_icons
+#:import md_icons  kivymd.icon_definitions.md_icons
 <ListBSIconLeft>
     font_style: 'Icon'
     text: u"{}".format(md_icons[root.icon])

@@ -3,9 +3,9 @@ from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import BoundedNumericProperty, ReferenceListProperty
 from kivy.uix.boxlayout import BoxLayout
-from vendor.kivymd.elevationbehavior import ElevationBehavior
+from kivymd.elevationbehavior import ElevationBehavior
 
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
 Builder.load_string('''
 <MDCard>

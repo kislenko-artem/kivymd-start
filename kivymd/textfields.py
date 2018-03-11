@@ -7,9 +7,9 @@ from kivy.metrics import sp, dp
 from kivy.properties import ObjectProperty, NumericProperty, StringProperty, \
     ListProperty, BooleanProperty
 from kivy.uix.textinput import TextInput
-from vendor.kivymd.label import MDLabel
+from kivymd.label import MDLabel
 
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
 Builder.load_string('''
 <SingleLineTextField>:

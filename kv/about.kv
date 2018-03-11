@@ -1,6 +1,9 @@
 <AboutScreen>:
-    Toolbar:
-        id: toolbar
-        title: 'about'
+    pos: 100, 100
+    AnchorLayout:
+        anchor_x: "center"
+        anchor_y: "top"
         background_color: app.theme_cls.primary_dark
-        left_action_items: [['menu', lambda x: app.nav_drawer.toggle()]]
+        Label:
+            color: 0, 0, 0, 1
+            text: "about"

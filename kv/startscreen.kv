@@ -1,4 +1,4 @@
-#:import Toolbar vendor.kivymd.toolbar.Toolbar
+#:import Toolbar kivymd.toolbar.Toolbar
 
 BoxLayout:
     orientation: 'vertical'
@@ -9,6 +9,8 @@ BoxLayout:
         left_action_items: [['menu', lambda x: app.nav_drawer.toggle()]]
     ScreenManagement:
         id: manager
+        background_color: app.theme_cls.primary_dark
+        size_hint: 1, 0.5
         AboutScreen:
             id: about
         SettingsScreen:

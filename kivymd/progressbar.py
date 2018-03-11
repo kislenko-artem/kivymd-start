@@ -4,7 +4,7 @@ from kivy.lang import Builder
 from kivy.properties import OptionProperty, BooleanProperty
 from kivy.uix.progressbar import ProgressBar
 
-from vendor.kivymd.theming import ThemableBehavior
+from kivymd.theming import ThemableBehavior
 
 Builder.load_string('''
 <MDProgressBar>:
@@ -40,13 +40,13 @@ class MDProgressBar(ThemableBehavior, ProgressBar):
     
 if __name__ == '__main__':
     from kivy.app import App
-    from vendor.kivymd.theming import ThemeManager
+    from kivymd.theming import ThemeManager
     
     class ProgressBarApp(App):
         theme_cls = ThemeManager()
 
         def build(self):
-            return Builder.load_string("""#:import MDSlider  vendor.kivymd.slider.MDSlider
+            return Builder.load_string("""#:import MDSlider  kivymd.slider.MDSlider
 BoxLayout:
     orientation:'vertical'
     padding: '8dp'
