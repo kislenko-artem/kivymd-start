@@ -11,7 +11,7 @@ from libs.navigationdrawer import NavigationDrawer
 from vendor.kivymd.theming import ThemeManager
 from config import KV_DIR
 
-class StartScreen(Screen):
+class StartScreen(BoxLayout):
     pass
 
 class AboutScreen(Screen):
@@ -19,6 +19,12 @@ class AboutScreen(Screen):
 
 class SettingsScreen(Screen):
     pass
+
+class ScreenManagement(ScreenManager):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.add_widget(SettingsScreen(name="settings"))
+        self.add_widget(AboutScreen(name="about"))
 
 
 class Navigator(NavigationDrawer):
@@ -32,17 +38,9 @@ class NavigateApp(App):
 
     def build(self):
         self.load_all_kv_files(KV_DIR)
-        self.screen = ScreenManager()
-        self.screen_start = StartScreen(name='start')
-        self.screen_about = AboutScreen(name='about')
-        self.screen_setting = SettingsScreen(name='settings')
-        self.screen.add_widget( self.screen_start)
-        self.screen.add_widget(self.screen_about)
-        self.screen.add_widget(self.screen_setting)
-        self.screen.current = "start"
-        # main_widget = Builder.load_file(os.path.join(KV_DIR, "main.kv"))
+        main_widget = Builder.load_file(os.path.join(KV_DIR, "startscreen.kv"))
         self.nav_drawer = Navigator()
-        return self.screen
+        return main_widget
 
     def load_all_kv_files(self, directory_kv_files):
         for kv_file in os.listdir(directory_kv_files):
@@ -52,7 +50,7 @@ class NavigateApp(App):
                     Builder.load_string(kv.read())
 
     def show_about(self, *args):
-        self.screen.current = "about"
+        self.root.ids.manager.current = "about"
         return True
 
 NavigateApp().run()
