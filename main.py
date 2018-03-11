@@ -3,11 +3,17 @@ import os
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import ObjectProperty, StringProperty
+from kivy.uix.screenmanager import ScreenManager, Screen
 
 # from kivymd.navigationdrawer import NavigationDrawer
 from libs.navigationdrawer import NavigationDrawer
 from vendor.kivymd.theming import ThemeManager
 from config import KV_DIR
+
+
+
+class About(Screen):
+    pass
 
 
 class Navigator(NavigationDrawer):
@@ -20,8 +26,14 @@ class NavigateApp(App):
     nav_drawer = ObjectProperty()
 
     def build(self):
-        main_widget = Builder.load_file(os.path.join(KV_DIR, "main.kv"))
+        self.sm = ScreenManager()
+        self.sm.add_widget(About(name='about'))
+        # main_widget = Builder.load_file(os.path.join(KV_DIR, "main.kv"))
         self.nav_drawer = Navigator()
-        return main_widget
+        return self.sm
+
+    def show_about(self, *args):
+        self.nav_drawer.toggle_nav_drawer()
+        self.screen.ids.about.ids.label.text = ""
 
 NavigateApp().run()
