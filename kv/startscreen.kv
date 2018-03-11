@@ -1,0 +1,14 @@
+#:import Toolbar vendor.kivymd.toolbar.Toolbar
+
+<StartScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Toolbar:
+            id: toolbar
+            title: 'Welcome'
+            background_color: app.theme_cls.primary_dark
+            left_action_items: [['menu', lambda x: app.nav_drawer.toggle()]]
+        ScreenManager:
+            id: manager
+            AboutScreen:
+                id: about
