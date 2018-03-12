@@ -2,6 +2,7 @@ import os
 
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
 
@@ -30,12 +31,12 @@ class ScreenManagement(ScreenManager):
 
 
 class Navigator(NavigationDrawer):
-    title = ""
+    title = StringProperty('Navigation')
 
 
 class NavigateApp(App):
     theme_cls = ThemeManager()
-    nav_drawer = {}
+    nav_drawer = ObjectProperty()
 
     def build(self):
         self.load_all_kv_files(KV_DIR)
