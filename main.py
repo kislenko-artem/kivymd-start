@@ -49,6 +49,7 @@ class NavigateApp(App):
     def load_all_kv_files(self, directory_kv_files):
         for kv_file in os.listdir(directory_kv_files):
             kv_file = os.path.join(directory_kv_files, kv_file)
+            print(kv_file)
             if os.path.isfile(kv_file):
                 with open(kv_file) as kv:
                     Builder.load_string(kv.read())
@@ -60,5 +61,6 @@ class NavigateApp(App):
     def show_settings(self, *args):
         self.root.ids.manager.current = "settings"
         return True
+
 
 NavigateApp().run()
