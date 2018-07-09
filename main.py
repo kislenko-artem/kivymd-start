@@ -7,6 +7,7 @@ from kivy.lang import Builder
 from kivy.properties import ObjectProperty, StringProperty
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.boxlayout import BoxLayout
+from kivy.network.urlrequest import UrlRequest
 
 from libs.navigationdrawer import NavigationDrawer
 from kivymd.theming import ThemeManager
@@ -49,7 +50,6 @@ class NavigateApp(App):
     def load_all_kv_files(self, directory_kv_files):
         for kv_file in os.listdir(directory_kv_files):
             kv_file = os.path.join(directory_kv_files, kv_file)
-            print(kv_file)
             if os.path.isfile(kv_file):
                 with open(kv_file) as kv:
                     Builder.load_string(kv.read())
@@ -59,6 +59,14 @@ class NavigateApp(App):
         return True
 
     def show_settings(self, *args):
+        def got_json(req, result):
+            print('python0 got_json0')
+        def got_json1(req, result):
+            print('python1 got_json1')
+        print("python1")
+        req2 = UrlRequest('http://www.wired.co.uk', got_json1, timeout=5)
+        req = UrlRequest('https://httpbin.org/headers', got_json, timeout=5)
+        print("python2")
         self.root.ids.manager.current = "settings"
         return True
 
