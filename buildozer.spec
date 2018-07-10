@@ -31,7 +31,7 @@ version.regex = __version__ = ['"](.*)['"]
 version.filename = %(source.dir)s/main.py
 # (list) Application requirements
 # comma seperated e.g. requirements = sqlite3,kivy
-requirements = kivy==1.10.1
+requirements = kivy==1.10.0
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
