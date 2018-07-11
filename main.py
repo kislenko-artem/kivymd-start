@@ -48,25 +48,17 @@ class NavigateApp(App):
         return main_widget
 
     def load_all_kv_files(self, directory_kv_files):
-        for kv_file in os.listdir(directory_kv_files):
-            kv_file = os.path.join(directory_kv_files, kv_file)
-            if os.path.isfile(kv_file):
-                with open(kv_file) as kv:
-                    Builder.load_string(kv.read())
+        Builder.load_file(os.path.join(directory_kv_files, "startscreen.kv"))
+        Builder.load_file(os.path.join(directory_kv_files, "navigationdrawer.kv"))
+        Builder.load_file(os.path.join(directory_kv_files, "about.kv"))
+        Builder.load_file(os.path.join(directory_kv_files, "settings.kv"))
+        Builder.load_file(os.path.join(directory_kv_files, "navigator_menu.kv"))
 
     def show_about(self, *args):
         self.root.ids.manager.current = "about"
         return True
 
     def show_settings(self, *args):
-        def got_json(req, result):
-            print('python0 got_json0')
-        def got_json1(req, result):
-            print('python1 got_json1')
-        print("python1")
-        req2 = UrlRequest('http://www.wired.co.uk', got_json1, timeout=5)
-        req = UrlRequest('https://httpbin.org/headers', got_json, timeout=5)
-        print("python2")
         self.root.ids.manager.current = "settings"
         return True
 
